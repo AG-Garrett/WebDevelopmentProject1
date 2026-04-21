@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Browser Technology - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Web Browser Technology</h1>
+    <p class="tagline">A class project website about the role, history, and future of web browsers.</p>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="features.html">Modern Features</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Introduction</h2>
+      <p>
+        Web browsers are one of the most important technologies on the internet.
+        They allow users to access websites, interact with online services, and
+        experience the World Wide Web.
+      </p>
+    </section>
+
+    <section class="hero-grid">
+      <div class="card">
+        <h2>Key Terms</h2>
+        <ul>
+          <li>Browser engine</li>
+          <li>Rendering</li>
+          <li>JavaScript</li>
+          <li>HTML5</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Project Image</h2>
+        <img src="images/browser.jpg" alt="Logos of popular web browsers">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="history.html">History of Web Browsers</a></li>
+        <li><a href="features.html">Modern Browser Features</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References and Learning Resources</a></li>
+        <li><a href="about.html">About Me and This Project</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a class project for IT 3203. Visit the course website:
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Course Site</a>
+    </p>
+  </footer>
+</body>
+</html>
