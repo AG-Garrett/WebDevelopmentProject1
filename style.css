@@ -43,6 +43,14 @@ a {
   text-decoration: none;
 }
 
+/* FORCE content links to be dark */
+.container a,
+.card a,
+ol a,
+ul a {
+  color: #1f3c88;
+}
+
 /* Hover effect */
 a:hover {
   text-decoration: underline;
