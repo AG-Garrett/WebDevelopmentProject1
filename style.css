@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header styling */
+/* Header */
 header {
   background-color: #1f3c88;
   color: white;
@@ -16,13 +16,13 @@ header {
   border-bottom: 4px solid #0d1b40;
 }
 
-/* Class selector example */
+/* Tagline */
 .tagline {
   font-style: italic;
   margin-top: 5px;
 }
 
-/* Navigation menu using flexbox */
+/* Navigation menu (flexbox) */
 .menu {
   list-style: none;
   display: flex;
@@ -37,16 +37,25 @@ header {
   display: inline;
 }
 
-/* Links */
+/* DEFAULT LINKS (content area) */
 a {
-  color: #dbe8ff;
+  color: #1f3c88;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
 }
 
 /* Hover effect */
 a:hover {
+  text-decoration: underline;
+}
+
+/* MENU LINKS (header only) */
+.menu a {
+  color: #dbe8ff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.menu a:hover {
   background-color: #ffffff;
   color: #1f3c88;
 }
@@ -74,7 +83,7 @@ a:hover {
   gap: 20px;
 }
 
-/* Image styling */
+/* Images */
 img {
   max-width: 100%;
   height: auto;
