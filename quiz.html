@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Browser Technology - Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Web Browser Technology Quiz</h1>
+    <p class="tagline">Test your understanding of the material from this project.</p>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="features.html">Modern Features</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Self-Assessment Quiz</h2>
+      <p>
+        Complete the quiz below to check your understanding of web browser technology.
+        After you submit, your score, results, and correct answers will appear on this page.
+      </p>
+
+      <!-- Quiz form -->
+      <form id="quizForm">
+        <!-- Fill in the blank question -->
+        <div class="quiz-question">
+          <h3>1. Fill in the blank</h3>
+          <label for="q1">The secure version of HTTP is called:</label><br>
+          <input type="text" id="q1" name="q1" class="text-input">
+        </div>
+
+        <!-- Multiple choice question 1 -->
+        <div class="quiz-question">
+          <h3>2. Multiple Choice</h3>
+          <p>Which browser was introduced by Google in 2008?</p>
+          <label><input type="radio" name="q2" value="A"> Firefox</label><br>
+          <label><input type="radio" name="q2" value="B"> Chrome</label><br>
+          <label><input type="radio" name="q2" value="C"> Safari</label><br>
+          <label><input type="radio" name="q2" value="D"> Opera</label>
+        </div>
+
+        <!-- Multiple choice question 2 -->
+        <div class="quiz-question">
+          <h3>3. Multiple Choice</h3>
+          <p>What does CSS mainly control on a webpage?</p>
+          <label><input type="radio" name="q3" value="A"> Structure</label><br>
+          <label><input type="radio" name="q3" value="B"> Database storage</label><br>
+          <label><input type="radio" name="q3" value="C"> Appearance and layout</label><br>
+          <label><input type="radio" name="q3" value="D"> Domain registration</label>
+        </div>
+
+        <!-- Multiple choice question 3 -->
+        <div class="quiz-question">
+          <h3>4. Multiple Choice</h3>
+          <p>Which of the following is responsible for making webpages interactive?</p>
+          <label><input type="radio" name="q4" value="A"> HTML</label><br>
+          <label><input type="radio" name="q4" value="B"> CSS</label><br>
+          <label><input type="radio" name="q4" value="C"> JavaScript</label><br>
+          <label><input type="radio" name="q4" value="D"> PNG</label>
+        </div>
+
+        <!-- Multi-selection question -->
+        <div class="quiz-question">
+          <h3>5. Multi-Selection</h3>
+          <p>Select all features commonly found in modern web browsers:</p>
+          <label><input type="checkbox" name="q5" value="A"> Tabbed browsing</label><br>
+          <label><input type="checkbox" name="q5" value="B"> Built-in developer tools</label><br>
+          <label><input type="checkbox" name="q5" value="C"> Automatic coffee maker</label><br>
+          <label><input type="checkbox" name="q5" value="D"> Password management</label>
+        </div>
+
+        <div class="quiz-buttons">
+          <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+          <button type="reset" onclick="resetQuiz()">Retake / Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" id="results">
+      <h2>Quiz Results</h2>
+      <p>Your results will appear here after submission.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a class project for IT 3203. Visit the course website:
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Course Site</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
