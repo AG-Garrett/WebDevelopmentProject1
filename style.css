@@ -16,13 +16,16 @@ header {
   border-bottom: 4px solid #0d1b40;
 }
 
-/* Tagline */
+header h1 {
+  margin-bottom: 5px;
+}
+
 .tagline {
   font-style: italic;
   margin-top: 5px;
 }
 
-/* Navigation menu (flexbox) */
+/* Navigation menu */
 .menu {
   list-style: none;
   display: flex;
@@ -37,35 +40,36 @@ header {
   display: inline;
 }
 
-/* DEFAULT LINKS (content area) */
-a {
-  color: #1f3c88;
-  text-decoration: none;
-}
-
-/* FORCE content links to be dark */
+/* Content links */
+main a,
 .container a,
 .card a,
 ol a,
 ul a {
-  color: #1f3c88;
+  color: #1f3c88 !important;
+  text-decoration: none;
 }
 
-/* Hover effect */
-a:hover {
+main a:hover,
+.container a:hover,
+.card a:hover,
+ol a:hover,
+ul a:hover {
   text-decoration: underline;
 }
 
-/* MENU LINKS (header only) */
+/* Header menu links */
 .menu a {
-  color: #dbe8ff;
+  color: #dbe8ff !important;
   padding: 8px 12px;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .menu a:hover {
   background-color: #ffffff;
-  color: #1f3c88;
+  color: #1f3c88 !important;
+  text-decoration: none;
 }
 
 /* Main container */
@@ -91,12 +95,90 @@ a:hover {
   gap: 20px;
 }
 
+/* Concepts grid */
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
 /* Images */
 img {
   max-width: 100%;
   height: auto;
   border: 2px solid #ccc;
   border-radius: 8px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #dbe8ff;
+}
+
+/* Quiz styling */
+.quiz-question {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.quiz-question h3 {
+  margin-top: 0;
+}
+
+.text-input {
+  width: 250px;
+  max-width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.quiz-buttons {
+  margin-top: 20px;
+}
+
+.quiz-buttons button {
+  background-color: #1f3c88;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.quiz-buttons button:hover {
+  background-color: #0d1b40;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -108,8 +190,145 @@ footer {
   margin-top: 30px;
 }
 
-/* FIX Table of Contents specifically */
+footer a {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* Fix Table of Contents links */
 .card ol li a {
   color: #1f3c88 !important;
   font-weight: 500;
+}
+
+/* ============================
+   Responsive design: tablet
+   Applies to screens 768px and smaller
+   ============================ */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menu a {
+    width: 180px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .container {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  .quiz-buttons button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* ============================
+   Responsive design: phone
+   Applies to screens 480px and smaller
+   ============================ */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .menu a {
+    width: 100%;
+    max-width: 260px;
+    font-size: 0.95rem;
+  }
+
+  .container {
+    width: 96%;
+  }
+
+  .card {
+    padding: 14px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .text-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .quiz-question {
+    padding: 12px;
+  }
+
+  .quiz-buttons button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
 }
